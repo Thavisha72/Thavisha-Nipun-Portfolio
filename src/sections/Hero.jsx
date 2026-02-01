@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse delay-1000" />
 
             <div className="container mx-auto px-6 z-10 grow flex flex-col justify-center">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 mb-16">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16">
 
                     {/* Text Content */}
                     <motion.div
@@ -84,7 +84,7 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+                        <div className="relative w-72 h-72 md:w-112 md:h-112 mx-auto">
                             <div className="absolute inset-0 bg-linear-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
                             <img
                                 src="https://media.licdn.com/dms/image/v2/D5603AQEe-u5s5txClg/profile-displayphoto-scale_400_400/B56ZwZuSMVK8Ag-/0/1769958090671?e=1771459200&v=beta&t=DEMEYNcFxH6iX6nZGrdJLdVsp-2eZVErisdp5VqLaYI"
