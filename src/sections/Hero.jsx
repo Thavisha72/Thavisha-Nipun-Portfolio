@@ -84,8 +84,8 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto">
-                            <div className="absolute inset-0 bg-linear-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
                             <img
                                 src="https://media.licdn.com/dms/image/v2/D5603AQEe-u5s5txClg/profile-displayphoto-scale_400_400/B56ZwZuSMVK8Ag-/0/1769958090671?e=1771459200&v=beta&t=DEMEYNcFxH6iX6nZGrdJLdVsp-2eZVErisdp5VqLaYI"
                                 alt="Thavisha Nipun"

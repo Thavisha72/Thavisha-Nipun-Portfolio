@@ -46,7 +46,7 @@ const projectsData = [
         description: "In-depth exploratory data analysis of Unemployment in India Before and during the Covid-19.",
         tags: ["Colab", "Seaborn", "Matplotlib"],
         image: unemploymentImg,
-        githubLink: "https://github.com/Thavisha72/Unemployment-Analysis-with-Python",
+        githubLink: "https://github.com/Thavisha72/Unemployment_Analysis_with_Python",
         demoLink: "#"
     },
 
@@ -77,7 +77,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-20 bg-background/50">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 max-w-7xl">
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ const Projects = () => {
                 {/* Grid */}
                 <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 >
                     <AnimatePresence>
                         {filteredProjects.map((project) => (
