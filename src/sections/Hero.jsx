@@ -39,11 +39,11 @@ const Hero = () => {
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse delay-1000" />
 
             <div className="container mx-auto px-6 z-10 grow flex flex-col justify-center">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-16">
 
                     {/* Text Content */}
                     <motion.div
-                        className="flex-1 text-center md:text-left"
+                        className="flex-1 text-center md:text-left md:pl-20"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}

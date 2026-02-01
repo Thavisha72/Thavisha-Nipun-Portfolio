@@ -8,7 +8,7 @@ export const ThemeProvider = ({ children }) => {
         if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
             return localStorage.getItem('theme');
         }
-        return 'dark';
+        return 'light';
     });
 
     useEffect(() => {
