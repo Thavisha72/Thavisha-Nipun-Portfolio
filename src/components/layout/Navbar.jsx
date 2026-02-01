@@ -22,15 +22,7 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact' },
     ];
 
-    const handleClick = (e, href) => {
-        e.preventDefault();
-        const element = document.querySelector(href);
-        if (element) {
-            const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-            setIsOpen(false);
-        }
-    };
+
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
@@ -38,7 +30,7 @@ const Navbar = () => {
             : 'bg-transparent py-6'
             }`}>
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative flex items-center justify-between">
-                <a href="#home" onClick={(e) => handleClick(e, '#home')} className="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer">
+                <a href="#home" className="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer">
                     Thavisha Nipun
                 </a>
 
@@ -48,7 +40,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            onClick={(e) => handleClick(e, link.href)}
+
                             onMouseEnter={() => setHoveredLink(link.name)}
                             onMouseLeave={() => setHoveredLink(null)}
                             className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -103,13 +95,13 @@ const Navbar = () => {
                         exit={{ opacity: 0, height: 0 }}
                         className="md:hidden border-b border-white/10 overflow-hidden absolute w-full top-full left-0 backdrop-blur-xl bg-background/90"
                     >
-                        <div className="flex flex-col gap-4 p-6 items-center">
+                        <div className="flex flex-col p-4">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={(e) => handleClick(e, link.href)}
-                                    className="text-lg font-medium text-muted-foreground hover:text-foreground"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-lg font-medium text-muted-foreground hover:text-foreground hover:bg-muted py-4 rounded-lg text-center transition-colors block w-full"
                                 >
                                     {link.name}
                                 </a>

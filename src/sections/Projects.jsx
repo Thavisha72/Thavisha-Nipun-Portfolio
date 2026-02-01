@@ -1,66 +1,79 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import inventoryImg from '../assets/Inventory.png';
+import unemploymentImg from '../assets/Unemployment.png';
+import playerAnalysisImg from '../assets/Player Analysis.png';
+import accidentImg from '../assets/Accident.png';
+import earthquakeImg from '../assets/Earthquake.png'
+// import earthquakeImg from '../assets/Earthquake.png'; // File missing
 
 const projectsData = [
     {
-        id: 1,
-        title: "Customer Churn Prediction",
-        category: "ML",
-        description: "Predicting customer churn using Random Forest and XGBoost with 92% accuracy.",
-        tags: ["Python", "Scikit-Learn", "Pandas"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        id: 2,
-        title: "E-commerce Sales EDA",
-        category: "EDA",
-        description: "In-depth exploratory data analysis of 1M+ sales records visualizing trends and seasonality.",
-        tags: ["Jupyter", "Seaborn", "Matplotlib"],
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+        id: 4,
+        title: "Inventory Management System",
+        category: "Machine Learning",
+        description: "This System developed using Python and Flask and allows users to manage and predict product inventory.",
+        tags: ["Python", "Flask", "HTML", "CSS"],
+        image: inventoryImg,
+        githubLink: "https://github.com/Thavisha72/Inventory-Management-system",
+        demoLink: "#"
     },
     {
         id: 3,
-        title: "AI Customer Support Bot",
-        category: "Chatbots",
-        description: "RAG-based chatbot using OpenAI API and LangChain to answer support queries.",
-        tags: ["LangChain", "OpenAI", "React"],
-        image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop"
+        title: "Global-Earthquake-prediction",
+        category: ["Machine Learning", "Exploratory Data Analysis (EDA)"],
+        description: "Global Earthquake Prediction using Machine Learning and Data Analysis.",
+        tags: ["Python", "Scikit-Learn", "Pandas", "Seaborn", "Numpy", "Matplotlib"],
+        image: earthquakeImg,
+        githubLink: "https://github.com/Thavisha72/Global-Earthquake-prediction",
+        demoLink: "#"
     },
     {
-        id: 4,
-        title: "House Price Prediction",
-        category: "ML",
-        description: "Regression model to estimate house prices based on features like location and size.",
-        tags: ["Python", "TensorFlow", "Keras"],
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
+        id: 1,
+        title: "Accident severity Prediction",
+        category: "Machine Learning",
+        description: "Predicting Accident Severity Based on Driver Behavior and Environmental Factors.",
+        tags: ["Python", "Scikit-Learn", "Pandas", "Seaborn", "Numpy", "Matplotlib"],
+        image: accidentImg,
+        githubLink: "https://github.com/Thavisha72/Accident-severity-Prediction",
+        demoLink: "https://gemini.google.com/share/e891896e1a71"
     },
     {
-        id: 5,
-        title: "Twitter Sentiment Analysis",
-        category: "EDA",
-        description: "Analyzing public sentiment on trending topics using NLP techniques.",
-        tags: ["NLTK", "Python", "Plotly"],
-        image: "https://images.unsplash.com/photo-1611605698302-6b93827d06e2?q=80&w=800&auto=format&fit=crop"
+        id: 2,
+        title: "Unemployment Analysis EDA",
+        category: "Exploratory Data Analysis (EDA)",
+        description: "In-depth exploratory data analysis of Unemployment in India Before and during the Covid-19.",
+        tags: ["Colab", "Seaborn", "Matplotlib"],
+        image: unemploymentImg,
+        githubLink: "https://github.com/Thavisha72/Unemployment-Analysis-with-Python",
+        demoLink: "#"
     },
+
     {
         id: 6,
-        title: "Personal Assistant Bot",
-        category: "Chatbots",
-        description: "Voice-activated assistant capable of scheduling and basic tasks.",
-        tags: ["Python", "SpeechRecognition", "API"],
-        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop"
+        title: "Player Analysis",
+        category: "Dashboards",
+        description: "PowerbI Dashboard for Srilankan National Cricket Player Analysis.",
+        tags: ["PowerbI", "Excel"],
+        image: playerAnalysisImg,
+        githubLink: "https://github.com/Thavisha72/Player-Analysis",
+        demoLink: "#"
     }
 ];
 
-const categories = ["All", "ML", "EDA", "Chatbots"];
+const categories = ["All", "Machine Learning", "Exploratory Data Analysis (EDA)", "Dashboards"];
 
 const Projects = () => {
     const [activeCategory, setActiveCategory] = useState("All");
 
     const filteredProjects = activeCategory === "All"
         ? projectsData
-        : projectsData.filter(project => project.category === activeCategory);
+        : projectsData.filter(project =>
+            Array.isArray(project.category)
+                ? project.category.includes(activeCategory)
+                : project.category === activeCategory
+        );
 
     return (
         <section id="projects" className="py-20 bg-background/50">
@@ -108,29 +121,33 @@ const Projects = () => {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                                 key={project.id}
-                                className="group relative bg-muted/50 border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-colors"
+                                className="group relative bg-muted/50 dark:bg-white/5 border border-border dark:border-[#a855f7]! rounded-2xl overflow-hidden hover:border-primary/50 dark:hover:shadow-lg dark:hover:shadow-primary/10 transition-all"
                             >
-                                <div className="aspect-video overflow-hidden">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
-                                        <a href="#" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors">
+                                <div className="aspect-video overflow-hidden relative">
+                                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                    </a>
+                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm pointer-events-none">
+                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors pointer-events-auto">
                                             <Github className="w-5 h-5" />
                                         </a>
-                                        <a href="#" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors">
+                                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors pointer-events-auto">
                                             <ExternalLink className="w-5 h-5" />
                                         </a>
                                     </div>
                                 </div>
 
                                 <div className="p-6">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <span className="text-xs font-bold text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
-                                            {project.category}
-                                        </span>
+                                    <div className="flex flex-wrap gap-2 items-start mb-4">
+                                        {(Array.isArray(project.category) ? project.category : [project.category]).map(cat => (
+                                            <span key={cat} className="text-xs font-bold text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
+                                                {cat}
+                                            </span>
+                                        ))}
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
                                     <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>

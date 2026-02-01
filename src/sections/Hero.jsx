@@ -2,16 +2,34 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, ChevronDown } from 'lucide-react';
 
-const tools = [
-    { name: "Python", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-    { name: "TensorFlow", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
-    { name: "Pandas", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" },
-    { name: "NumPy", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" },
-    { name: "Scikit-Learn", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" },
-    { name: "Jupyter", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
-    { name: "PostgreSQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
-    { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-];
+const techCategories = {
+    "Languages": [
+        { name: "Python", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+        { name: "R", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" },
+        { name: "SQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" }
+    ],
+    "Libraries & Frameworks": [
+        { name: "TensorFlow", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
+        { name: "Pandas", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" },
+        { name: "NumPy", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" },
+        { name: "Scikit-Learn", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" }
+    ],
+    "Databases": [
+        { name: "PostgreSQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+        { name: "MongoDB", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" }
+    ],
+    "Visualization": [
+        { name: "Power BI", url: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
+        { name: "Tableau", url: "https://static.cdnlogo.com/logos/t/16/tableau.svg" }
+    ],
+    "Dev Tools": [
+        { name: "VS Code", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+        { name: "RStudio", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg" },
+        { name: "Jupyter", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
+        { name: "Colab", url: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
+        { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" }
+    ]
+};
 
 const Hero = () => {
     return (
@@ -37,8 +55,8 @@ const Hero = () => {
                             Hi, I'm <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Thavisha Nipun</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl font-light">
-                            Data Science Student passionate about ML, EDA, and Chatbots.
-                            Transforming data into actionable insights.
+                            Data Science Student passionate about Machine Learning, Data Analytics, and Business Intelligence.
+
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
@@ -69,7 +87,7 @@ const Hero = () => {
                         <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto">
                             <div className="absolute inset-0 bg-linear-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+                                src="https://media.licdn.com/dms/image/v2/D5603AQEe-u5s5txClg/profile-displayphoto-scale_400_400/B56ZwZuSMVK8Ag-/0/1769958090671?e=1771459200&v=beta&t=DEMEYNcFxH6iX6nZGrdJLdVsp-2eZVErisdp5VqLaYI"
                                 alt="Thavisha Nipun"
                                 className="w-full h-full object-cover rounded-full border-4 border-muted relative z-10 shadow-2xl"
                             />
@@ -97,25 +115,31 @@ const Hero = () => {
                     transition={{ delay: 0.4, duration: 0.8 }}
                     className="w-full border-t border-border pt-10"
                 >
-                    <p className="text-center text-muted-foreground text-sm font-medium uppercase tracking-wider mb-8">
-                        Technologies & Tools
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-                        {tools.map((tool, index) => (
-                            <motion.div
-                                key={index}
-                                whileHover={{ y: -5, scale: 1.1 }}
-                                className="flex flex-col items-center gap-2 group"
-                            >
-                                <img
-                                    src={tool.url}
-                                    alt={tool.name}
-                                    className="h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300"
-                                />
-                                <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
-                                    {tool.name}
-                                </span>
-                            </motion.div>
+                    <div className="flex flex-wrap justify-center gap-x-16 gap-y-10 items-start">
+                        {Object.entries(techCategories).map(([category, tools], catIndex) => (
+                            <div key={catIndex} className="flex flex-col items-center gap-4">
+                                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-widest">
+                                    {category}
+                                </h3>
+                                <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+                                    {tools.map((tool, index) => (
+                                        <motion.div
+                                            key={index}
+                                            whileHover={{ y: -5, scale: 1.1 }}
+                                            className="flex flex-col items-center gap-2 group"
+                                        >
+                                            <img
+                                                src={tool.url}
+                                                alt={tool.name}
+                                                className="h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300"
+                                            />
+                                            <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+                                                {tool.name}
+                                            </span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </motion.div>

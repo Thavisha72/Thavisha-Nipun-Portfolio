@@ -18,12 +18,10 @@ const Contact = () => {
                     <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Get in Touch</span>
                     <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">Let's Work Together</h2>
                     <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-                        I'm currently looking for new opportunities in Data Science.
-                        Whether you have a question or just want to say hi, I'll try my best to get back to you!
-                    </p>
+                        I'm currently looking for new opportunities in Data Science. </p>
 
                     <a
-                        href="mailto:thavisha@example.com"
+                        href="mailto:thavishanipun@gmail.com"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 rounded-full font-bold text-lg hover:opacity-90 transition-opacity"
                     >
                         <Mail className="w-5 h-5" />
@@ -32,10 +30,10 @@ const Contact = () => {
 
                     <div className="mt-16 flex flex-wrap justify-center gap-8">
                         {[
-                            { icon: Mail, href: "mailto:thavisha@example.com", label: "Email" },
-                            { icon: Phone, href: "https://wa.me/9471XXXXXXX", label: "WhatsApp" },
-                            { icon: Linkedin, href: "https://linkedin.com/in/thavisha-nipun", label: "LinkedIn" },
-                            { icon: Github, href: "https://github.com", label: "GitHub" }
+                            { icon: Mail, href: "mailto:thavishanipun@gmail.com", label: "Email" },
+                            { icon: Phone, href: "https://wa.me/94718351784", label: "WhatsApp" },
+                            { icon: Linkedin, href: "https://linkedin.com/in/thavisha-nipun-bandara-3584a3202", label: "LinkedIn" },
+                            { icon: Github, href: "https://github.com/Thavisha72", label: "GitHub" }
                         ].map((social, index) => (
                             <a
                                 key={index}
