@@ -32,7 +32,7 @@ const educationData = [
         degree: "Certificate in English and IT",
         institution: "Esoft Metro Campus",
         period: "2022",
-        Modules: "Spoken English, HTML, CSS, ",
+        Modules: "Spoken English, HTML, CSS, Photoshop, Microsft Office",
         location: "Anuradhapura, Sri Lanka",
         logo: EsoftLogo
     },
