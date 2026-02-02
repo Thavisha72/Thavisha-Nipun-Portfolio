@@ -4,7 +4,7 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 import sltcLogo from '../assets/SLTC LOGO.png';
 import stjosephLogo from '../assets/stjoseph.jpg';
 import iasLogo from '../assets/iassl.png';
-
+import EsoftLogo from '../assets/Esoft.jpg';
 
 const educationData = [
     {
@@ -29,6 +29,15 @@ const educationData = [
     },
     {
         id: 3,
+        degree: "Certificate in English and IT",
+        institution: "Esoft Metro Campus",
+        period: "2022",
+        Modules: "Spoken English, HTML, CSS, ",
+        location: "Anuradhapura, Sri Lanka",
+        logo: EsoftLogo
+    },
+    {
+        id: 4,
         degree: "Secondary Education",
         institution: "St. Joseph's Collage",
         period: "2007-2020",
