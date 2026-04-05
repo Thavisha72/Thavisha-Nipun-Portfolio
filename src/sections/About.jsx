@@ -38,7 +38,7 @@ const About = () => {
         {
             icon: Code,
             title: "Tools",
-            skills: ["Git", "Docker", "AWS", "Figma", "VS Code"]
+            skills: ["Git", "Docker", "AWS", "Figma", "VS Code", "Airflow", "Databricks", "MLflow"]
         }
     ];
 

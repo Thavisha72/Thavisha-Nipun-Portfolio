@@ -27,7 +27,10 @@ const techCategories = {
         { name: "RStudio", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg" },
         { name: "Jupyter", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
         { name: "Colab", url: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
-        { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" }
+        { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+        { name: "Airflow", url: "https://cdn.simpleicons.org/apacheairflow/017CEE" },
+        { name: "Databricks", url: "https://cdn.simpleicons.org/databricks/FF3621" },
+        { name: "MLflow", url: "https://cdn.simpleicons.org/mlflow/0194E2" }
     ]
 };
 

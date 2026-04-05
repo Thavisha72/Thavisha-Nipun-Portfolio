@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import { Github, Sparkles } from 'lucide-react';
 import inventoryImg from '../assets/Inventory.png';
 import unemploymentImg from '../assets/Unemployment.png';
 import playerAnalysisImg from '../assets/Player Analysis.png';
 import accidentImg from '../assets/Accident.png';
 import earthquakeImg from '../assets/Earthquake.png'
-// import earthquakeImg from '../assets/Earthquake.png'; // File missing
+import mlopsImg from '../assets/Mlops.png'
+
 
 const projectsData = [
+    {
+        id: 3,
+        title: "MLOPS - Customer Churn Prediction Pipeline",
+        category: ["Machine Learning"],
+        description: "A complete MLOps pipeline for predicting customer churn using a Telco Customer Churn dataset. The system is modular, containerized, and production-ready.",
+        tags: ["Python", "Scikit-Learn", "MLFlow", "DVC", "AirFlow", "Docker"],
+        image: mlopsImg,
+        githubLink: "https://github.com/Thavisha72/Customer-Churn-Prediction-MLOps-Pipeline"
+    },
     {
         id: 4,
         title: "Inventory Management System",
@@ -19,6 +29,7 @@ const projectsData = [
         githubLink: "https://github.com/Thavisha72/Inventory-Management-system",
         demoLink: "#"
     },
+
     {
         id: 3,
         title: "Global-Earthquake-prediction",
@@ -37,7 +48,7 @@ const projectsData = [
         tags: ["Python", "Scikit-Learn", "Pandas", "Seaborn", "Numpy", "Matplotlib"],
         image: accidentImg,
         githubLink: "https://github.com/Thavisha72/Accident-severity-Prediction",
-        demoLink: "https://gemini.google.com/share/e891896e1a71"
+        demoLink: ""
     },
     {
         id: 2,
@@ -124,7 +135,7 @@ const Projects = () => {
                                 className="group relative bg-muted/50 dark:bg-white/5 border border-border dark:border-[#a855f7]! rounded-2xl overflow-hidden hover:border-primary/50 dark:hover:shadow-lg dark:hover:shadow-primary/10 transition-all"
                             >
                                 <div className="aspect-video overflow-hidden relative">
-                                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
+                                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
                                         <img
                                             src={project.image}
                                             alt={project.title}
@@ -134,9 +145,6 @@ const Projects = () => {
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm pointer-events-none">
                                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors pointer-events-auto">
                                             <Github className="w-5 h-5" />
-                                        </a>
-                                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground text-background rounded-full hover:bg-muted-foreground transition-colors pointer-events-auto">
-                                            <ExternalLink className="w-5 h-5" />
                                         </a>
                                     </div>
                                 </div>
