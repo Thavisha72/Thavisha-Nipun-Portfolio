@@ -87,7 +87,7 @@ const Hero = () => {
                         <div className="relative w-72 h-72 md:w-md md:h-auto md:aspect-square mx-auto">
                             <div className="absolute inset-0 bg-linear-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
                             <img
-                                src="https://media.licdn.com/dms/image/v2/D5603AQEe-u5s5txClg/profile-displayphoto-scale_400_400/B56ZwZuSMVK8Ag-/0/1769958090671?e=1771459200&v=beta&t=DEMEYNcFxH6iX6nZGrdJLdVsp-2eZVErisdp5VqLaYI"
+                                src="https://github.com/Thavisha72.png"
                                 alt="Thavisha Nipun"
                                 className="w-full h-full object-cover rounded-full border-4 border-muted relative z-10 shadow-2xl"
                             />
@@ -100,7 +100,7 @@ const Hero = () => {
                             >
                                 <div className="text-xs text-muted-foreground mb-1">Current Focus</div>
                                 <div className="font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
-                                    Machine Learning
+                                    Machine Learning / Data Analytics
                                 </div>
                             </motion.div>
                         </div>
