@@ -70,7 +70,7 @@ const Hero = () => {
                                 View Projects
                             </a>
                             <a
-                                href="/resume.pdf"
+                                href="/Thavisha Nipun CV.pdf"
                                 download
                                 className="px-8 py-3 bg-muted border border-border rounded-full font-semibold hover:bg-muted/80 transition-colors flex items-center gap-2 group text-foreground"
                             >
